@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hitta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+      <ul class="menu">
+        <li class="item item-home"><a href="index.html">Startsida</a></li>
+        <li class="item"><a href="hitta.html">Hitta</a></li>
+        <li class="item"><a href="kontakta.html">Kontakta</a></li>
+        <li class="item item-button item-green"><a href="boka.html">Boka</a></li>
+        <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+      </ul>
+    </nav>
+  <header>
+    <h1>Hitta</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+       commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </header>
+  <!-- skapa en container runt iframen(kartan ) och koden som är slideshown -->
+  <div id="flex">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4588.515650992539!2d16.44857612164968!3d43.50389371952792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133560a993607ae9%3A0x661830c68dc6fa25!2sHotel%20Park%20-%20Potestas%20Ltd.!5e0!3m2!1ssv!2sse!4v1619597564914!5m2!1ssv!2sse"
+      width="1100" height="475" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="bild1.jpg" style="width:100%" alt="bild1">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="bild2.jpg" style="width:100%" alt="bild2">
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="bild3.jpg" style="width:100%" alt="bild3">
+        <div class="text">Caption Three</div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </div>
+  <br>
+
+  <!-- The dots/circles -->
+  <div id="container" style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+  <main>
+
+  </main>
+  <footer>
+    <section>
+      <p>Split 23, 212 51 malmo, Sverige</p>
+    </section>
+    <section>
+      <p>Paradise Hotel © 2021</p>
+    </section>
+    <a href="mailto:testadress@mail.com">Paradise.hotel@gmail.com</a>
+  </footer>
+</body>
+
+</html>

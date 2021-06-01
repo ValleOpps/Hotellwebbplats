@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Paradise Hotel</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <ul class="menu">
+        <li class="item item-home"><a href="index.html">Startsida</a></li>
+        <li class="item"><a href="hitta.html">Hitta</a></li>
+        <li class="item"><a href="kontakta.html">Kontakta</a></li>
+        <li class="item item-button item-green"><a href="boka.html">Boka</a></li>
+        <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+      </ul>
+    </nav>
+  <header>
+    <h1>Bokning</h1>
+    <p>Porttitor massa id neque aliquam vestibulum morbi blandit cursus. Dignissim
+       convallis aenean et tortor. Eget mauris pharetra et ultrices neque. Libero
+       nunc consequat interdum varius sit amet mattis vulputate. Eget nunc lobortis
+       mattis aliquam faucibus purus in. Mi proin sed libero enim sed. Varius quam
+       quisque id diam vel quam elementum. </p>
+  </header>
+  <main>
+    <form action="reservation.php" method="post">
+      <div class="elem-group">
+        <label for="namn">Ditt namn</label>
+        <input type="text" id="namn" name="besökarens_namn" placeholder="Åke björesson" pattern=[A-Z\sa-z]{3,20} required>
+      </div>
+      <div class="elem-group">
+        <label for="telefon">Ditt telefonnummer</label>
+        <input type="tel" id="telefon" name="besökarens_telefon" placeholder="072-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+      </div>
+      <hr>
+      <div class="elem-group inlined">
+        <label for="vuxen">Vuxna</label>
+        <input type="number" id="vuxen" name="antal_vuxna" placeholder="0" min="1" required>
+      </div>
+      <div class="elem-group inlined">
+        <label for="barn">Barn</label>
+        <input type="number" id="barn" name="antal_barn" placeholder="0" min="0" required>
+      </div>
+      <div class="elem-group inlined">
+        <label for="checkin-datum">Check-in Datum</label>
+        <input type="date" id="checkin-datum" name="checkin" required>
+      </div>
+      <div class="elem-group inlined">
+        <label for="checkout-datum">Check-out Datum</label>
+        <input type="date" id="checkout-datum" name="checkout" required>
+      </div>
+      <div class="elem-group">
+        <label for="room-selection">Välj Rum Preferens</label>
+        <select id="room-selection" name="rum_preferens" required>
+            <option value="">Välj ett rum</option>
+            <option value="rum 1">1 rum</option>
+            <option value="rum 2">2 rum</option>
+            <option value="lyx rum">Master bedroom</option>
+        </select>
+      </div>
+      <hr>
+      <button type="submit">Boka Rummen</button>
+    </form>
+  </main>
+  <footer>
+    <section>
+      <p>Split 23, 212 51 malmo, Sverige</p>
+    </section>
+    <section>
+      <p>Paradise Hotel © 2021</p>
+    </section>
+    <a href="mailto:testadress@mail.com">Paradise.hotel@gmail.com</a>
+  </footer>
+  </body>
+</html>

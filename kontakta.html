@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hitta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+      <ul class="menu">
+        <li class="item item-home"><a href="index.html">Startsida</a></li>
+        <li class="item"><a href="hitta.html">Hitta</a></li>
+        <li class="item"><a href="kontakta.html">Kontakta</a></li>
+        <li class="item item-button item-green"><a href="boka.html">Boka</a></li>
+        <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Kontakta</h1>
+      <p>Lectus urna duis convallis convallis tellus id interdum. Vitae semper quis
+         lectus nulla at volutpat diam. Gravida quis blandit turpis cursus. Ut tellus
+         elementum sagittis vitae.</p>
+    </header>
+  <main>
+    <form action="reservation.php" method="post">
+      <div class="elem-group">
+        <label for="namn">Ditt namn</label>
+        <input type="text" id="namn" name="besökarens_namn" placeholder="Åke björesson" pattern=[A-Z\sa-z]{3,20} required>
+      </div>
+      <div class="elem-group">
+        <label for="e-post">Din E-post</label>
+        <input type="tel" id="e-post" name="besökarens_telefon" placeholder="alfred.bengt@hotmail.com" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+      </div>
+      <hr>
+      <div class="elem-group">
+        <label for="ärende">Ditt ärende</label>
+        <select id="ärende" name="vilket_ärende" required>
+            <option value="">Vilket ärende</option>
+            <option value="hjälp">Hjälp</option>
+            <option value="feedback">Feedback</option>
+        </select>
+      </div>
+
+      <div class="elem-group">
+        <label for="subject">Ämne</label>
+        <textarea id=subject name="subject" placeholder="Skriv" style="height:100px"></textarea>
+      </div>
+
+      <hr>
+      <button type="submit">Skicka</button>
+    </form>
+  </main>
+  <footer>
+    <section>
+      <p>Split 23, 212 51 malmo, Sverige</p>
+    </section>
+    <section>
+      <p>Paradise Hotel © 2021</p>
+    </section>
+    <a href="mailto:testadress@mail.com">Paradise.hotel@gmail.com</a>
+  </footer>
+</body>
+
+</html>
